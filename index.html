@@ -1,1 +1,29 @@
-
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="Pliki/styl.css">
+    </head>
+    <body>
+        <!-- elementy: -->
+        <b><p id="wynik">wynik: 0</p></b>
+        <input type="image" src="Pliki/szczur.png" width="15%" onclick="klik(this)" class="tenteges" style="margin-left: 10%;" id="szczurrr">
+        <!-- skrypty: -->
+        <script>
+            var element = document.getElementById("szczurrr");
+            var stat = 0
+            function klik(szczur)
+            {
+                var numer = Math.floor(Math.random() * 80) + 1 
+                element.style.marginLeft = numer + "%"
+                szczur.classList.remove('spadnij')
+                szczur.classList.toggle('powrot')
+                stat = stat + 1
+                document.getElementById("wynik").innerHTML = "wynik: " + stat
+                setTimeout(function() {
+                    szczur.classList.remove('powrot')
+                    szczur.classList.toggle('spadnij')
+                }, 1000)
+            }
+        </script>
+    </body>
+</html>
