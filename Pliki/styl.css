@@ -2,10 +2,6 @@ body{
     background-image: url(background.png);
     background-size: 50%;
     overflow: hidden;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 #wynik{
     color: white;
