@@ -1,0 +1,41 @@
+body{
+    background-image: url(background.png);
+    background-size: 50%;
+    overflow: hidden;
+}
+#wynik{
+    color: white;
+    font-size: 300%;
+    text-align: center;
+    text-shadow:
+        2px 2px 0 black,
+        -2px 2px 0 black,
+        2px -2px 0 black,
+        -2px -2px 0 black;
+}
+
+@keyframes spadanie{
+    0% {transform: translateY(-200%);}
+    99.99999% {transform: translateY(2000%);}
+    100% {transform: translateY(-200%);}
+}
+@keyframes powrot{
+    100% {transform: translateY(-200%);}
+}
+
+.tenteges {
+    animation: spadanie 7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.powrot{
+    animation: powrot 0.000001s;
+    animation-fill-mode: forwards;
+}
+.spadnij {
+    animation: spadanie 7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
