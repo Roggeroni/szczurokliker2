@@ -13,13 +13,14 @@
             var stat = Number(localStorage.getItem('save')) || 0
             function klik(szczur)
             {
-                localStorage.setItem('save', stat);
+                
                 var numer = Math.floor(Math.random() * 80) + 1 
                 element.style.marginLeft = numer + "%"
                 szczur.classList.remove('spadnij')
                 szczur.classList.toggle('powrot')
                 stat = stat + 1
                 document.getElementById("wynik").innerHTML = "wynik: " + stat
+                localStorage.setItem('save', stat);
                 setTimeout(function() {
                     szczur.classList.remove('powrot')
                     szczur.classList.toggle('spadnij')
