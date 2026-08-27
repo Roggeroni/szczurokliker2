@@ -10,9 +10,10 @@
         <!-- skrypty: -->
         <script>
             var element = document.getElementById("szczurrr");
-            var stat = 0
+            var stat = Number(localStorage.getItem('save')) || 0
             function klik(szczur)
             {
+                localStorage.setItem('save', stat);
                 var numer = Math.floor(Math.random() * 80) + 1 
                 element.style.marginLeft = numer + "%"
                 szczur.classList.remove('spadnij')
