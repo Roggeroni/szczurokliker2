@@ -11,6 +11,11 @@
         <script>
             var element = document.getElementById("szczurrr");
             var stat = Number(localStorage.getItem('save')) || 0
+            window.onload = function() 
+            {
+                
+                document.getElementById("wynik").innerHTML = "wynik: " + stat;
+            };
             function klik(szczur)
             {
                 
